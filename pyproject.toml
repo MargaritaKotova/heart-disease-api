@@ -1,0 +1,22 @@
+[project]
+name = "heart-disease-api"
+version = "0.1.0"
+description = "Flask classifier for the Kaggle Heart Disease dataset"
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "Flask==3.1.3",
+    "gunicorn==23.0.0",
+    "pydantic==2.11.4",
+    "numpy==2.2.5",
+    "pandas==2.2.3",
+    "scikit-learn==1.6.1",
+    "joblib==1.4.2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==8.3.5"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
